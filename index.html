@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style type="text/css">
+
+    .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .loader {
+        border: 6px solid #000000;
+        border-radius: 50%;
+        border-left: 6px solid white;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+</style>
     <!--
       If you are serving your web app in a path other than the root, change the
       href value below to reflect the base path you are serving from.
@@ -14,8 +59,11 @@
       This is a placeholder for base href that will be replaced by the value of
       the `--base-href` argument provided to `flutter build`.
     -->
+    <!--  <base href="/eeva-hochiminh/">-->
     <base href="./">
 
+
+<!--    <base href="/">-->
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta name="description" content="A new Flutter project.">
@@ -34,13 +82,16 @@
 
     <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '542386879';
+    var serviceWorkerVersion = '2420584094';
 
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
 </head>
 <body>
+<div class="loading">
+    <div class="loader"></div>
+</div>
 <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
