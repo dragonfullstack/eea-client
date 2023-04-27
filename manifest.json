@@ -3,6 +3,7 @@
     "short_name": "EEA Hồ Chí Minh 2023",
     "start_url": ".",
     "display": "standalone",
+    "scope": ".",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
     "description": "EEA Hồ Chí Minh 2023",
